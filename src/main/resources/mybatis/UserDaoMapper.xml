@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.chenxp.dao.UserDao">
+
+
+
+<!-- 	<insert id="create" useGeneratedKeys="true" keyProperty="id"
+		parameterType="LcLog">
+		insert into lc_log (userName, type,
+		content,createTime,note)
+		values (#{userName}, #{type},
+		#{content},#{createTime},#{note})
+	</insert>
+
+	<delete id="delete" parameterType="int">
+		delete from lc_log where id =
+		#{logID}
+	</delete> -->
+
+
+	<select id="get" resultType="CsUser" parameterType="string">
+		select *
+		from user where username=#{username}
+	</select>
+
+
+
+
+</mapper>

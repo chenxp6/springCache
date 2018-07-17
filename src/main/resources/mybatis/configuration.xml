@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<!-- 自动映射为驼峰式 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"></setting>
+		<setting name="callSettersOnNulls" value="true"/>
+		<!-- 日志输出sql -->
+       <!--  <setting name="logImpl" value="LOG4J" /> -->
+       	<!-- 控制台输出sql -->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+	</settings>
+	<typeAliases>
+		<typeAlias alias="CsUser" type="cn.chenxp.model.CsUser"></typeAlias>
+		
+	</typeAliases>
+</configuration>

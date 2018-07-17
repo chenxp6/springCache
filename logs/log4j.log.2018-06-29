@@ -1,0 +1,488 @@
+2018-06-29 15:45:21,866 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 15:45:21,945 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 15:45:21 CST 2018]; root of context hierarchy>
+2018-06-29 15:45:21,985 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 15:45:22,288 WARN [org.mybatis.spring.mapper.ClassPathMapperScanner] - <No MyBatis mapper was found in '[cn.datatowisdom.logcenter.dao]' package. Please check your configuration.>
+2018-06-29 15:45:22,305 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 15:45:22,312 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 15:45:22,417 WARN [org.springframework.web.context.support.XmlWebApplicationContext] - <Exception encountered during context initialization - cancelling refresh attempt>
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1145)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1069)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	... 22 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1326)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	... 38 more
+2018-06-29 15:45:22,425 ERROR [org.springframework.web.context.ContextLoader] - <Context initialization failed>
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1145)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1069)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	... 22 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1326)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	... 38 more
+2018-06-29 15:52:16,816 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 15:52:16,908 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 15:52:16 CST 2018]; root of context hierarchy>
+2018-06-29 15:52:16,964 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 15:52:17,275 WARN [org.mybatis.spring.mapper.ClassPathMapperScanner] - <No MyBatis mapper was found in '[cn.datatowisdom.logcenter.dao]' package. Please check your configuration.>
+2018-06-29 15:52:17,289 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 15:52:17,297 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 15:52:17,361 WARN [org.springframework.web.context.support.XmlWebApplicationContext] - <Exception encountered during context initialization - cancelling refresh attempt>
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1326)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	... 22 more
+2018-06-29 15:52:17,369 ERROR [org.springframework.web.context.ContextLoader] - <Context initialization failed>
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [cn.chenxp.dao.UserDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1326)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	... 22 more
+2018-06-29 15:56:49,509 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 15:56:49,584 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 15:56:49 CST 2018]; root of context hierarchy>
+2018-06-29 15:56:49,627 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 15:56:49,926 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 15:56:49,934 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 15:56:50,386 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 876 ms>
+2018-06-29 15:56:50,430 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 15:56:50,433 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 15:56:50 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 15:56:50,433 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 15:56:50,554 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 15:56:50,685 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get/{username}]}" onto public void cn.chenxp.controller.UserController.testReids(java.lang.String)>
+2018-06-29 15:56:51,035 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 15:56:50 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 15:56:51,107 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 15:56:50 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 15:56:51,284 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 853 ms>
+2018-06-29 16:00:09,730 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:00:09,810 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:00:09 CST 2018]; root of context hierarchy>
+2018-06-29 16:00:09,849 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:00:10,155 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:00:10,190 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:00:10,607 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 876 ms>
+2018-06-29 16:00:10,647 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:00:10,649 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:00:10 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:00:10,650 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:00:10,788 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:00:10,927 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get]}" onto public void cn.chenxp.controller.UserController.testReids(java.lang.String)>
+2018-06-29 16:00:11,323 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:00:10 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:00:11,450 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:00:10 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:00:11,637 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 990 ms>
+2018-06-29 16:00:44,989 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:00:45,068 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:00:45 CST 2018]; root of context hierarchy>
+2018-06-29 16:00:45,111 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:00:45,411 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:00:45,419 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:00:45,776 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 786 ms>
+2018-06-29 16:00:45,883 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:00:45,886 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:00:45 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:00:45,886 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:00:46,022 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:00:46,183 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get]}" onto public void cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:00:46,736 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:00:45 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:00:46,880 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:00:45 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:00:47,070 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 1187 ms>
+2018-06-29 16:05:27,099 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:05:27,188 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:05:27 CST 2018]; root of context hierarchy>
+2018-06-29 16:05:27,229 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:05:27,555 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:05:27,563 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:05:27,922 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 822 ms>
+2018-06-29 16:05:28,023 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:05:28,026 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:05:28 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:05:28,026 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:05:28,173 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:05:28,348 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:05:28,695 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:05:28 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:05:28,750 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:05:28 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:05:28,911 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 888 ms>
+2018-06-29 16:07:52,825 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:07:52,912 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:07:52 CST 2018]; root of context hierarchy>
+2018-06-29 16:07:52,957 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:07:53,277 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:07:53,308 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:07:53,731 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 906 ms>
+2018-06-29 16:07:53,769 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:07:53,772 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:07:53 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:07:53,773 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:07:53,895 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:07:54,056 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:07:54,399 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:07:53 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:07:54,458 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:07:53 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:07:54,626 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 856 ms>
+2018-06-29 16:10:15,971 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:10:16,057 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:10:16 CST 2018]; root of context hierarchy>
+2018-06-29 16:10:16,108 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:10:16,456 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:10:16,463 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:10:16,836 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 865 ms>
+2018-06-29 16:10:16,943 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:10:16,946 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:10:16 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:10:16,947 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:10:17,074 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:10:17,234 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:10:17,564 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:10:16 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:10:17,626 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:10:16 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:10:17,794 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 851 ms>
+2018-06-29 16:12:07,135 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:12:07,224 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:12:07 CST 2018]; root of context hierarchy>
+2018-06-29 16:12:07,270 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:12:07,615 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:12:07,626 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:12:07,991 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 855 ms>
+2018-06-29 16:12:08,099 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:12:08,104 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:12:08 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:12:08,104 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:12:08,245 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:12:08,400 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:12:08,745 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:12:08 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:12:08,799 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:12:08 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:12:08,955 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 855 ms>
+2018-06-29 16:14:56,792 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:14:56,908 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:14:56 CST 2018]; root of context hierarchy>
+2018-06-29 16:14:56,968 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:14:57,349 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:14:57,359 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:14:57,879 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 1086 ms>
+2018-06-29 16:14:57,917 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:14:57,921 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:14:57 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:14:57,922 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:14:58,082 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:14:58,236 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:14:58,541 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:14:57 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:14:58,594 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:14:57 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:14:58,746 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 828 ms>
+2018-06-29 16:16:51,580 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:16:51,693 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:16:51 CST 2018]; root of context hierarchy>
+2018-06-29 16:16:51,733 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:16:52,083 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:16:52,091 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:16:52,624 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 1043 ms>
+2018-06-29 16:16:52,664 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:16:52,667 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:16:52 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:16:52,668 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:16:52,797 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:16:52,942 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:16:53,303 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:16:52 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:16:53,366 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:16:52 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:16:53,544 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 879 ms>
+2018-06-29 16:18:01,184 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:18:01,258 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:18:01 CST 2018]; root of context hierarchy>
+2018-06-29 16:18:01,320 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:18:01,623 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:18:01,631 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:18:02,047 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 863 ms>
+2018-06-29 16:18:02,085 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:18:02,088 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:18:02 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:18:02,088 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:18:02,221 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:18:02,371 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:18:02,707 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:18:02 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:18:02,774 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:18:02 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:18:02,935 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 850 ms>
+2018-06-29 16:24:50,834 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:24:50,912 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:24:50 CST 2018]; root of context hierarchy>
+2018-06-29 16:24:50,952 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:24:51,280 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:24:51,289 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:24:51,706 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 872 ms>
+2018-06-29 16:24:51,804 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:24:51,806 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:24:51 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:24:51,807 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:24:51,933 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:24:52,103 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:24:52,449 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:24:51 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:24:52,504 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:24:51 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:24:52,662 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 858 ms>
+2018-06-29 16:44:48,758 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:44:48,839 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:44:48 CST 2018]; root of context hierarchy>
+2018-06-29 16:44:48,881 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:44:49,243 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:44:49,250 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:44:49,751 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 993 ms>
+2018-06-29 16:44:49,789 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:44:49,791 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:44:49 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:44:49,792 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:44:49,914 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:44:50,088 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:44:50,469 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:44:49 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:44:50,532 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:44:49 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:44:50,730 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 941 ms>
+2018-06-29 16:47:38,823 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:47:38,900 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:47:38 CST 2018]; root of context hierarchy>
+2018-06-29 16:47:38,940 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:47:39,285 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:47:39,295 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:47:39,738 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 915 ms>
+2018-06-29 16:47:39,836 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:47:39,839 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:47:39 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:47:39,839 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:47:39,974 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:47:40,142 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:47:40,504 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:47:39 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:47:40,569 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:47:39 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:47:40,742 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 906 ms>
+2018-06-29 16:48:04,570 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:48:04,627 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:48:04 CST 2018]; root of context hierarchy>
+2018-06-29 16:48:04,658 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:48:04,899 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:48:04,905 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:48:05,193 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 623 ms>
+2018-06-29 16:48:05,212 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:48:05,214 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:48:05 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:48:05,215 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:48:05,372 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:48:05,454 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:48:05,683 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:48:05 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:48:05,713 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:48:05 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:48:05,776 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 564 ms>
+2018-06-29 16:49:40,675 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:49:40,754 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:49:40 CST 2018]; root of context hierarchy>
+2018-06-29 16:49:40,791 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:49:41,099 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:49:41,106 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:49:41,491 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 815 ms>
+2018-06-29 16:49:41,595 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:49:41,598 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:49:41 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:49:41,598 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:49:41,738 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:49:41,889 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:49:42,225 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:49:41 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:49:42,285 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:49:41 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:49:42,440 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 845 ms>
+2018-06-29 16:50:13,991 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:50:14,079 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:50:14 CST 2018]; root of context hierarchy>
+2018-06-29 16:50:14,115 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:50:14,416 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:50:14,423 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:50:14,779 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 788 ms>
+2018-06-29 16:50:14,876 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:50:14,879 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:50:14 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:50:14,879 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:50:15,013 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:50:15,162 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:50:15,491 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:50:14 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:50:15,558 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:50:14 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:50:15,755 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 879 ms>
+2018-06-29 16:55:42,526 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:55:42,611 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:55:42 CST 2018]; root of context hierarchy>
+2018-06-29 16:55:42,652 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:55:42,967 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:55:42,979 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:55:43,394 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 867 ms>
+2018-06-29 16:55:43,488 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:55:43,491 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:55:43 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:55:43,492 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:55:43,682 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:55:43,844 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:55:44,206 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:55:43 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:55:44,342 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:55:43 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:55:44,543 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 1055 ms>
+2018-06-29 16:57:40,390 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 16:57:40,469 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 16:57:40 CST 2018]; root of context hierarchy>
+2018-06-29 16:57:40,509 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 16:57:40,811 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 16:57:40,818 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:57:41,270 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 878 ms>
+2018-06-29 16:57:41,307 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 16:57:41,309 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:57:41 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:57:41,310 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 16:57:41,436 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 16:57:41,597 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 16:57:41,910 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:57:41 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:57:41,969 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 16:57:41 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 16:57:42,167 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 860 ms>
+2018-06-29 17:01:04,047 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 17:01:04,377 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 17:01:04 CST 2018]; root of context hierarchy>
+2018-06-29 17:01:04,491 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 17:01:05,300 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 17:01:05,315 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 17:01:06,325 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 2277 ms>
+2018-06-29 17:01:06,390 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 17:01:06,394 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:01:06 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:01:06,396 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 17:01:06,657 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 17:01:06,900 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 17:01:07,545 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:01:06 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:01:07,659 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:01:06 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:01:07,908 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 1518 ms>
+2018-06-29 17:04:38,223 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 17:04:38,321 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 17:04:38 CST 2018]; root of context hierarchy>
+2018-06-29 17:04:38,368 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 17:04:38,676 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 17:04:38,683 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 17:04:39,055 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 832 ms>
+2018-06-29 17:04:39,169 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 17:04:39,175 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:04:39 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:04:39,176 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 17:04:39,310 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 17:04:39,471 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 17:04:39,798 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:04:39 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:04:39,852 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:04:39 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:04:40,035 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 865 ms>
+2018-06-29 17:06:11,714 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-06-29 17:06:11,791 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jun 29 17:06:11 CST 2018]; root of context hierarchy>
+2018-06-29 17:06:11,828 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-06-29 17:06:12,112 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-06-29 17:06:12,119 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 17:06:12,535 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 820 ms>
+2018-06-29 17:06:12,573 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-06-29 17:06:12,575 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:06:12 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:06:12,576 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-06-29 17:06:12,695 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-06-29 17:06:12,843 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-06-29 17:06:13,153 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:06:12 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:06:13,203 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jun 29 17:06:12 CST 2018]; parent: Root WebApplicationContext>
+2018-06-29 17:06:13,387 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 814 ms>

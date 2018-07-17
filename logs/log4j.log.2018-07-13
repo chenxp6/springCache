@@ -1,0 +1,113 @@
+2018-07-13 15:27:05,429 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-07-13 15:27:05,551 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jul 13 15:27:05 CST 2018]; root of context hierarchy>
+2018-07-13 15:27:05,592 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-07-13 15:27:05,970 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-07-13 15:27:05,983 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-07-13 15:27:06,455 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 1024 ms>
+2018-07-13 15:27:06,568 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-07-13 15:27:06,571 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 15:27:06 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 15:27:06,571 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-07-13 15:27:06,775 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-07-13 15:27:06,919 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-07-13 15:27:07,299 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 15:27:06 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 15:27:07,381 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 15:27:06 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 15:27:07,646 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 1078 ms>
+2018-07-13 16:43:50,617 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-07-13 16:43:50,695 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jul 13 16:43:50 CST 2018]; root of context hierarchy>
+2018-07-13 16:43:50,744 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-07-13 16:43:50,862 ERROR [org.springframework.web.context.ContextLoader] - <Context initialization failed>
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 83 in XML document from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 83; columnNumber: 110; 与元素类型 "bean" 相关联的属性 "p:name" 的前缀 "p" 未绑定。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:604)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:509)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 83; columnNumber: 110; 与元素类型 "bean" 相关联的属性 "p:name" 的前缀 "p" 未绑定。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:308)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 22 more
+2018-07-13 16:43:50,885 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Closing Root WebApplicationContext: startup date [Fri Jul 13 16:43:50 CST 2018]; root of context hierarchy>
+2018-07-13 16:43:50,887 WARN [org.springframework.web.context.support.XmlWebApplicationContext] - <Exception thrown from LifecycleProcessor on context close>
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: Root WebApplicationContext: startup date [Fri Jul 13 16:43:50 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:414)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:925)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:583)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:116)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4980)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5626)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:160)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-13 16:47:04,796 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-07-13 16:47:04,900 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jul 13 16:47:04 CST 2018]; root of context hierarchy>
+2018-07-13 16:47:04,942 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-07-13 16:47:05,352 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-07-13 16:47:05,363 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-07-13 16:47:16,909 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-07-13 16:47:17,079 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jul 13 16:47:17 CST 2018]; root of context hierarchy>
+2018-07-13 16:47:17,159 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-07-13 16:47:17,589 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-07-13 16:47:17,598 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-07-13 16:47:18,146 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 1236 ms>
+2018-07-13 16:47:18,187 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-07-13 16:47:18,189 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 16:47:18 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 16:47:18,190 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-07-13 16:47:18,345 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-07-13 16:47:18,502 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-07-13 16:47:18,900 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 16:47:18 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 16:47:18,978 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 16:47:18 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 16:47:19,251 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 1064 ms>
+2018-07-13 16:52:28,784 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2018-07-13 16:52:28,883 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Fri Jul 13 16:52:28 CST 2018]; root of context hierarchy>
+2018-07-13 16:52:28,924 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from file [D:\eclipseWorkSpace1\SpringRedis\target\classes\spring\applicationContext-service.xml]>
+2018-07-13 16:52:29,264 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - <Loading properties file from class path resource [database.properties]>
+2018-07-13 16:52:29,271 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-07-13 16:52:29,802 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 1016 ms>
+2018-07-13 16:52:29,841 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization started>
+2018-07-13 16:52:29,844 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 16:52:29 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 16:52:29,846 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from class path resource [spring/springmvcContext.xml]>
+2018-07-13 16:52:29,992 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2018-07-13 16:52:30,178 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - <Mapped "{[/user/get],methods=[GET]}" onto public cn.chenxp.model.CsUser cn.chenxp.controller.UserController.testReids()>
+2018-07-13 16:52:30,632 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 16:52:29 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 16:52:30,723 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] - <Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Fri Jul 13 16:52:29 CST 2018]; parent: Root WebApplicationContext>
+2018-07-13 16:52:30,972 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'springmvc': initialization completed in 1131 ms>

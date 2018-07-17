@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/security 
+        http://www.springframework.org/schema/security/spring-security.xsd ">
+
+	<context:component-scan base-package="cn.chenxp.service.impl" />
+
+	<!-- 数据库配置，只需要在最后一个properties文件检查，这里忽略检查 -->
+	<context:property-placeholder location="classpath:database.properties"
+		ignore-unresolvable="true" order="1" />
+
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${logcenter.db.driverClassName}" />
+		<property name="url" value="${logcenter.db.url}" />
+		<property name="username" value="${logcenter.db.username}" />
+		<property name="password" value="${logcenter.db.password}" />
+		<property name="maxIdle" value="${logcenter.db.maxIdle}" />
+		<property name="validationQuery" value="SELECT 1" />
+		<property name="testOnBorrow" value="true" />
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath:mybatis/*Mapper.xml" />
+		<property name="configLocation" value="classpath:mybatis/configuration.xml"></property>
+	</bean>
+
+	<!-- <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"> 
+		<constructor-arg index="0" ref="sqlSessionFactory"> </constructor-arg> </bean> -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+		<!-- sqlSessionFactoryBeanName 或者 sqlSessionTemplateBeanName -->
+		<!-- <property name="sqlSessionTemplateBeanName" value="sqlSession" /> -->
+		<!-- 自动生成bean -->
+		<property name="basePackage" value="cn.chenxp.dao" />
+	</bean>
+
+	<!-- 支持事务配置 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 事务注解 @Transactional -->
+	<tx:annotation-driven transaction-manager="transactionManager"
+		proxy-target-class="true" />
+</beans>
